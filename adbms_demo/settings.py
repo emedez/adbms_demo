@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'enrollment',
 
     'debug_toolbar',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,5 @@ INTERNAL_IPS = [
 DEBUG_TOOLBAR_CONFIG = {
     'DISABLE_PANELS': {}
 }
+
+SHELL_PLUS_PRINT_SQL = True
