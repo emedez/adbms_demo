@@ -18,8 +18,14 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
+from .views import HomeView
+from enrollment.views import SubjectDetailView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', HomeView.as_view(), name='home'),
+    path('subjects/<int:pk>/', SubjectDetailView.as_view(), name='subject-detail'),
+
 ]
 
 if settings.DEBUG:
